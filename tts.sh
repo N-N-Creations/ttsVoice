@@ -131,6 +131,8 @@ fi
      rm -rf *.mp3
 
      sleep 2
+     
+     pause
      bash tts.sh
      
      
