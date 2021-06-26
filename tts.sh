@@ -90,7 +90,8 @@ install_deps(){
         pip install gTTS 
         apt update && apt upgrade -y
         cd $HOME
-        mkdir storage/ttsVoice
+        mkdir storage/music/ttsVoice
+        cd $HOME
         cd ttsVoice
         
     else
