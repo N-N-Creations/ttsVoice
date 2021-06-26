@@ -2,7 +2,6 @@ from gtts import gTTS
 
 import os 
 
-os.system("cd $HOME")
 
 mytext = input("\n\n\tType Your message : ")
 
@@ -36,5 +35,3 @@ print ('| %-*.*s |' % (len,len,msg))
 print ( '+' + '-'*(len-8) + '+')
 
 print ("\033[0m")
-
-os.system("cd ")

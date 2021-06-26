@@ -126,8 +126,13 @@ fi
 
 
      python text_to_voice.py
+     
+     cp *.mp3 ~/storage/music/ttsVoice/
+     rm -rf *.mp3"
 
      sleep 2
      bash tts.sh
-
-
+     
+     
+     
+   
