@@ -89,7 +89,9 @@ install_deps(){
         apt install mpg123 -y
         pip install gTTS 
         apt update && apt upgrade -y
+        cd $HOME
         mkdir storage/ttsVoice
+        cd ttsVoice
         
     else
         echo "We could not install dependencies."
