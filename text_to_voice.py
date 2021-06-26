@@ -18,10 +18,10 @@ myobj = gTTS(text=mytext, lang=language, slow=False)
 
   
 
-myobj.save("%s.mp3" % os.path.join("$storage/music/ttsVoice",file))
+myobj.save(file + ".mp3")
 
 
-os.system("mpg123 %s.mp3" % os.path.join("$storage/music/ttsVoice",file))
+os.system("mpg123 " + file + ".mp3")
 
 
 print ("\033[1m \033[91m hello ")
