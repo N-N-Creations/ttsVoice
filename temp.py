@@ -1,6 +1,6 @@
 import os
 os.system("ls")
-os.system("cd ")
+os.system("cd $HOME")
 os.system("ls")
 try:
     os.makedirs('my_folder')
