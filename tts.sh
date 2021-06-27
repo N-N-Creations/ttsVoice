@@ -23,7 +23,7 @@ detect_distro() {
 
 
 pause() {
-    echo -e "\033[1m \033[91m  Press CTRL + z to Stop \033[0m "
+    
     read -n1 -r -p "Press any key to continue..." key
 }
 
@@ -65,13 +65,13 @@ banner() {
         figlet Text2Voice
     fi
     if ! [ -x "$(command -v toilet)" ]; then
-        echo -e "\e[4;34m This Bomber Was Modify By \e[1;32mMATRIX \e[0m"
+        echo -e "\e[4;34m This Tool Was Created By \e[1;32mMATRIX \e[0m"
     else
         echo -e "\e[1;33mCreated By \e[1;32m"
         toilet -f mono12 -F border MATRIX
         
     fi
-    echo -e "\e[1;32m For Any Queries Join Me!!!\e[0m"
+    echo -e "\e[1;32m Please subscribe our youtube channel\e[0m"
     
     echo -e "\e[4;32m   YouTube: https://youtube.com/channel/UCUagOLyRyVbreJQR6-Swkvw \e[0m"
     echo " "
@@ -89,15 +89,17 @@ install_deps(){
         apt install mpg123 -y
         pip install gTTS 
         apt update && apt upgrade -y
+        pkg install python
         cd $HOME
+        mkdir storage/music
         mkdir storage/music/ttsVoice
         cd $HOME
-        cd ttsVoice
+        cd text-to-speech
         
     else
         echo "We could not install dependencies."
         echo "Please make sure you have git, python3, pip3 and requirements installed."
-        echo "Then you can execute bomber.py ."
+        echo "Then you can execute tts.sh ."
         exit
     fi
 }
@@ -122,9 +124,13 @@ else
     pause
 fi
 
+opt=1
 
+while [ $opt -ne 0 ]
 
+do
 
+     clear
      python text_to_voice.py
      
      cp *.mp3 ~/storage/music/ttsVoice/
@@ -132,9 +138,19 @@ fi
 
      sleep 2
      
-     pause
-     bash tts.sh
+    
      
-     
-     
-   
+     echo -e "\033[92m \033[1m \tEnter any number to continue \033[35m OR  \033[91m 0  to exit \033[0m "
+      
+      echo -e "\033[36m"
+      echo -e -n "\t\t\t"
+      
+      read;
+      opt=${REPLY}
+      
+      echo -e "\033[0m"
+  
+  
+done
+
+
