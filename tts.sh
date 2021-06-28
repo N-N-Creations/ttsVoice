@@ -94,7 +94,7 @@ install_deps(){
         mkdir storage/music
         mkdir storage/music/ttsVoice
         cd $HOME
-        cd text-to-speech
+        cd ttsVoice
         
     else
         echo "We could not install dependencies."
@@ -121,6 +121,7 @@ else
     install_deps
     echo This Script Was Made By MATRIX > .update
     echo 'Requirements Installed....'
+    clear
     pause
 fi
 
