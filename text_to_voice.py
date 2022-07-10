@@ -6,7 +6,7 @@ import os
 mytext = input("\n\n\tType Your message : ")
 
 
-file = mytext.replace(" ", "_")
+file = mytext[0]+('_')+mytext[1]+('_')+mytext[2]+('...')
 
 
 
